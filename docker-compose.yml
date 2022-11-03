@@ -23,7 +23,7 @@ services:
         consistency: delegated
   db:
     container_name: '${PROJECT_NAME}-db'
-    user: 'mysql:mysql'
+    user: 'mysql:mysql' # fix read only file system
     build:
       context: .
       dockerfile: ./docker/dev/mysql8/Dockerfile

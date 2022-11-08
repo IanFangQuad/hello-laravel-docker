@@ -24,6 +24,7 @@ services:
   db:
     container_name: '${PROJECT_NAME}-db'
     user: 'mysql:mysql' # fix read only file system
+    image: mysql:8.0
     build:
       context: .
       dockerfile: ./docker/dev/mysql8/Dockerfile
